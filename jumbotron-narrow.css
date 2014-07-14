@@ -31,6 +31,8 @@ h4 {
 
 h2 {
     color:#428bcf;
+    padding-top: 0;
+    margin-top:0;
     font-weight:bold;
 }
 
@@ -48,7 +50,7 @@ h2 {
 /* Customize container */
 @media (min-width: 768px) {
   .container {
-    max-width: 800px;
+    max-width: 1000px;
   }
 }
 .container-narrow > hr {
