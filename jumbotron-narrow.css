@@ -1,15 +1,8 @@
-body {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
 h4 {
     font-weight:bold;
 }
 
 h2 {
-    padding-top: 0;
-    margin-top:0;
     font-weight:bold;
 }
 
@@ -18,29 +11,18 @@ h2 {
 }
 
 .footer {
-  padding-top: 20px;
-  color: #777;
-  text-align:center;
+    padding-top: 22px;
+    text-align:center;
 }
 
-.header h3 {
-  padding-bottom: 5px;
-  margin: 0 0 0 0;
-}
-
-.header h4 {
-  padding-bottom: 0 0 0 0;
-  margin: 0 0 0 0;
-}
-
-.marketing h4 {
-  padding-top: 30px;
-}
-
-.marketing p {
+.container h4 {
     padding-top: 10px;
 }
 
-.marketing li {
-    padding-top: 5px;
+.publications p {
+    padding-bottom: 10px;
+}
+
+.header {
+    padding-bottom: 10px;
 }
