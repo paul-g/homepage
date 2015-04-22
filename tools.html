@@ -1,0 +1,23 @@
+<html>
+<body>
+<h3>Speedup Estimator (<a href="http://en.wikipedia.org/wiki/Amdahl%27s_law">Amdhal's law</a>)</h3>
+Speedup
+<input type="text" onchange="speedup()" id="frac" /> % of code  
+<input type="text" onchange="speedup()" id="times" /> times 
+=> total speedup = <input type="text" id="speedup"/>
+<hr/>
+</body>
+<script>
+function speedup() {
+ var frac = Number(document.getElementById('frac').value) / 100;
+ var times = Number(document.getElementById('times').value);
+ var speedup = document.getElementById('speedup');
+ console.log(speedup);
+ console.log(frac);
+ console.log(times);
+ res = times / ( (1 - frac) * times + frac);
+ speedup.value = res; 
+ console.log(res)
+}
+</script>
+</html>
