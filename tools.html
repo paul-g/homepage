@@ -2,22 +2,28 @@
 <body>
 <h3>Speedup Estimator (<a href="http://en.wikipedia.org/wiki/Amdahl%27s_law">Amdahl's law</a>)</h3>
 Speedup
-<input type="text" onchange="speedup()" id="frac" /> % of code  
-<input type="text" onchange="speedup()" id="times" /> times 
+<input type="text" onchange="speedup()" id="frac" /> % of code
+<input type="text" onchange="speedup()" id="times" /> times
 => total speedup = <input type="text" id="speedup"/>
 <hr/>
+<h3>Hex to Decimal Convertor</h3>
+Hex: <input type="text" onchange="hexToDec()" id="hexToDec_hex" />
+Dec: <input type="text" onchange="hexToDec()" id="hexToDec_dec" />
+
 </body>
 <script>
+function hexToDec() {
+  var hex = document.getElementById('hexToDec_hex').value;
+  var dec = document.getElementById('hexToDec_dec');
+  dec.value = parseInt(hex, 16);
+}
+
 function speedup() {
  var frac = Number(document.getElementById('frac').value) / 100;
  var times = Number(document.getElementById('times').value);
  var speedup = document.getElementById('speedup');
- console.log(speedup);
- console.log(frac);
- console.log(times);
  res = times / ( (1 - frac) * times + frac);
- speedup.value = res; 
- console.log(res)
+ speedup.value = res;
 }
 </script>
 </html>
